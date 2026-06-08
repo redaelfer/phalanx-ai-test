@@ -22,11 +22,11 @@ class TestDashboardRoute:
 
     def test_contains_dashboard_heading(self, client):
         html = client.get("/").data.decode()
-        assert "<h1>Dashboard</h1>" in html
+        assert "<h1>ENSIAS Dashboard</h1>" in html
 
     def test_contains_nav(self, client):
         html = client.get("/").data.decode()
-        assert "Phalanx AI" in html
+        assert "ENSIAS" in html
 
 
 class TestDarkModeToggle:
